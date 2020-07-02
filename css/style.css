@@ -1,5 +1,6 @@
 body{
   background-color: #F0F8FF;
+  zoom: 100%;
 }
 
 text{
@@ -9,8 +10,8 @@ text{
 }
 
 .roleta{
-    text-align: center;
-    margin-top: 40px;
+
+
     /* margin: 0;
       position: absolute;
       top: 50%;
@@ -19,12 +20,13 @@ text{
       transform: translate(-50%, -50%);*/
 }
 
-.container{
-    margin: 0;
-    position: absolute;
-    top: 90%;
-    left: 32%;
+.lista-opcoes{
+    position: relative;
     border: groove;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.teste {
+  text-align: center;
 }

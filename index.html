@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Escolha minha refeição</title>
+  <title>Roleta da Decisão</title>
   <meta charset="utf-8">
   <meta name="google-site-verification" content="google71aff4dfc070d67f">
   <meta name="description" content="Gire a roda da refeição para decidir aleatoriamente entre algumas opções. Também personalize suas escolhas removendo ou adicionando suas próprias!" />
@@ -36,34 +36,37 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL65RR"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-      <h1 align="center">Gire a roda</h1>
-      <div id="escolha"></div>
-      <div id="chart" class="roleta col-sm-12" align="center"></div>
+      <h1 align="center">Gire a roleta</h1>
       
-      <div class="container col-sm-4 col-md-4" id="formulario" align="center">
-        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
-          <input type="text" id="add-name" placeholder="Nova Refeição">
-          <input type="submit" value="Adicionar" class="btn btn-success">
-        </form>
+      <div class="container">
+        <div id="chart" class="roleta col-sm-12 col-md-12" align="center"></div>
+        <div class="col-sm-12 col-md-12 teste">
+          <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+              <input type="text" id="add-name" placeholder="Nova Opção">
+              <input type="submit" value="Adicionar" class="btn btn-success">
+            </form>
 
-        <div id="spoiler" role="aria-hidden" style="display: none">
-          <form action="javascript:void(0);" method="POST" id="saveEdit">
-            <input type="text" id="edit-name">
-            <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
-          </form>
+            <div id="spoiler" role="aria-hidden" style="display: none">
+              <form action="javascript:void(0);" method="POST" id="saveEdit">
+                <input type="text" id="edit-name">
+                <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
+              </form>
+            </div>
+            <p></p>
+            <table class="table table-bordered">
+              <tr>
+                <th>Descrição</th>
+                <th></th>
+              </tr>
+                <tbody id="refeicao-list">
+                </tbody>
+            </table>
+
+            <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
+          </div>
         </div>
-        <p></p>
-        <table class="table table-bordered">
-          <tr>
-            <th>Descrição</th>
-            <th></th>
-          </tr>
-            <tbody id="refeicao-list">
-            </tbody>
-        </table>
-
-        <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
-      </div>
+    </div>
 
 </body>
  <script type="text/javascript" src="js/chart.js"></script>

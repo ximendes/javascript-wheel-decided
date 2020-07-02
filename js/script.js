@@ -82,7 +82,7 @@ function CloseInput() {
 
 function teste(){
     if(app.countries.length == 0){
-        alert('Adicione ao menos uma refeição.');
+        alert('Adicione ao menos uma opção.');
     }else{
         createChart();
       }
