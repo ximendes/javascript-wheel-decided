@@ -15,13 +15,12 @@ function createChart(){
         var svg = d3.select('#chart')
                     .append("svg")
                     .data([data])
-                    .attr("width",  w + padding.left + padding.right)
-                    .attr("height", h + padding.top + padding.bottom)
-                    .attr("margin", "auto");
+                    .attr("width", 600)
+                    .attr("height", 600);
         
         var container = svg.append("g")
                            .attr("class", "chartholder")
-                           .attr("transform", "translate(" + (w/2 + padding.left) + "," + (h/2 + padding.top) + ")");
+                           .attr("transform", "translate(" + (w/2) + "," + (h/2) + ")");
         
         var vis = container.append("g");
             
