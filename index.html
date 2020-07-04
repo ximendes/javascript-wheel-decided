@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Roleta da Decisão</title>
-  <meta charset="utf-8">
-  <meta name="google-site-verification" content="google71aff4dfc070d67f">
-  <meta name="description" content="Gire a roda da refeição para decidir aleatoriamente entre algumas opções. Também personalize suas escolhas removendo ou adicionando suas próprias!" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <meta name="keywords" content="oque comer, escolha minha refeição, escolha minha refeicao">
-  <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WRL65RR');</script>
-    <!-- End Google Tag Manager -->
-</head>
+  <head>
+
+    <title>Roleta da Decisão</title>
+    
+    <!--================== Meta description and meta title for google search results ==================-->
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="google71aff4dfc070d67f">
+    <meta name="description" content="Gire a roleta para decidir aleatoriamente entre algumas opções. Também personalize suas escolhas  
+                                      removendo ou adicionando suas próprias!" />
+    <meta name="keywords" content="oque comer, escolha minha refeição, escolha minha refeicao">
+    <!--======================================= Mobile Specifc Metas =======================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--======================================= CSS =======================================-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="css/style.css"   type="text/css" >
+    <link rel="icon"       href="images/logo.png" type = "image/x-icon"> 
+    
+    <!--======================================= JS =======================================-->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171466011-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-171466011-1');
     </script>
 
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL65RR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-      <h1 align="center">Gire a roleta</h1>
-      
-      <div class="container">
-        <div id="chart" class="roleta col-sm-12 col-md-12" align="center"></div>
-        <div class="col-sm-12 col-md-12 teste">
-          <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
-            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
-              <input type="text" id="add-name" placeholder="Nova Opção">
-              <input type="submit" value="Adicionar" class="btn btn-success">
-            </form>
+  </head>   
 
-            <div id="spoiler" role="aria-hidden" style="display: none">
-              <form action="javascript:void(0);" method="POST" id="saveEdit">
-                <input type="text" id="edit-name">
-                <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
+  <body>
+      <!--========================= Google Tag Manager (noscript) =========================-->
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL65RR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+        
+        <div class="container">
+          <h1 align="center">Gire a Roleta</h1>
+                      <!--==================== ROLETA ==================== -->
+          <div id="chart" class="col-sm-12 col-md-12" align="center"></div>
+          
+
+          <div class="col-sm-12 col-md-12">
+            <!--======== INÍCIO FORMULÁRIO & LISTA DE OPÇÕES ========-->
+            <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
+              <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+                <input type="text" id="add-name" placeholder="Nova Opção">
+                <input type="submit" value="Adicionar" class="btn btn-success">
               </form>
+
+                <div id="spoiler" role="aria-hidden" style="display: none">
+                <form action="javascript:void(0);" method="POST" id="saveEdit">
+                  <input type="text" id="edit-name">
+                  <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
+                </form>
+              </div>
+              <p></p>
+              <table class="table table-bordered">
+                <tr>
+                  <th>Descrição</th>
+                  <th></th>
+                </tr>
+                  <tbody id="refeicao-list">
+                  </tbody>
+              </table>
+              <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
             </div>
-            <p></p>
-            <table class="table table-bordered">
-              <tr>
-                <th>Descrição</th>
-                <th></th>
-              </tr>
-                <tbody id="refeicao-list">
-                </tbody>
-            </table>
+            <!--======== FIM FORMULÁRIO & LISTA DE OPÇÕES ========-->
 
-            <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
-          </div>
+            <!--======== INÍCIO DESCRIÇÃO========-->
+            <div class="col-sm-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis bibendum metus. Praesent vitae euismod tortor. Donec sed pharetra lacus, elementum consectetur sapien. Vivamus sed velit elit. Nam posuere purus elit, eget luctus lorem lacinia id. Aenean est nunc, tempor at magna eu, pretium luctus dui. Aliquam consequat tincidunt tellus, et blandit nisl convallis id. In hac habitasse platea dictumst. Donec varius aliquet nisi ac interdum. Quisque ac dapibus lorem, non elementum metus. Etiam et ligula mauris. Nunc vel tortor mi. Nullam tristique, purus et tincidunt sollicitudin, lectus arcu dignissim diam, gravida molestie est ex at urna.
+
+              Nam bibendum tortor sit amet mauris placerat commodo. Etiam aliquam mi et diam molestie, eu maximus erat convallis. Praesent egestas dignissim commodo. Nulla a accumsan sem. Nunc volutpat sed metus eget suscipit. Nulla laoreet bibendum elit. Pellentesque et eros sem. Praesent pharetra sit amet risus id blandit.
+            </div>
+            <!--======== FIM DESCRIÇÃO========-->
+          </div>  
         </div>
-    </div>
-
-</body>
- <script type="text/javascript" src="js/chart.js"></script>
- <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </html>

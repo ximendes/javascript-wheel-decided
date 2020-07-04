@@ -9,19 +9,9 @@ text{
     pointer-events:none;
 }
 
-.roleta{
-
-
-    /* margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);*/
-}
-
 .lista-opcoes{
     position: relative;
+    margin: 0;
     border: groove;
     padding-top: 10px;
     padding-bottom: 10px;
