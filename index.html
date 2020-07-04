@@ -35,53 +35,53 @@
   </head>   
 
   <body>
-      <!--========================= Google Tag Manager (noscript) =========================-->
-      <noscript>
+     <!--========================= Google Tag Manager (noscript) =========================-->
+     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRL65RR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
         
-        <div class="container">
-          <h1 align="center">Gire a Roleta</h1>
-                      <!--==================== ROLETA ==================== -->
-          <div id="chart" class="col-sm-12 col-md-12" align="center"></div>
-          
+    <div class="container">
+      <h1 align="center">Gire a Roleta</h1>
+                  <!--==================== ROLETA ==================== -->
+      <div id="chart" class="col-sm-12 col-md-12" align="center"></div>
+      
 
-          <div class="col-sm-12 col-md-12 teste">
-            <!--======== INÍCIO FORMULÁRIO & LISTA DE OPÇÕES ========-->
-            <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
-              <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
-                <input type="text" id="add-name" placeholder="Nova Opção">
-                <input type="submit" value="Adicionar" class="btn btn-success">
-              </form>
+      <div class="col-sm-12 col-md-12 teste">
+        <!--======== INÍCIO FORMULÁRIO & LISTA DE OPÇÕES ========-->
+        <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
+          <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+            <input type="text" id="add-name" placeholder="Nova Opção">
+            <input type="submit" value="Adicionar" class="btn btn-success">
+          </form>
 
-                <div id="spoiler" role="aria-hidden" style="display: none">
-                <form action="javascript:void(0);" method="POST" id="saveEdit">
-                  <input type="text" id="edit-name">
-                  <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
-                </form>
-              </div>
-              <p></p>
-              <table class="table table-bordered">
-                <tr>
-                  <th>Descrição</th>
-                  <th></th>
-                </tr>
-                  <tbody id="refeicao-list">
-                  </tbody>
-              </table>
-              <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
-            </div>
-            <!--======== FIM FORMULÁRIO & LISTA DE OPÇÕES ========-->
-
-            <!--======== INÍCIO DESCRIÇÃO========-->
-            <div class="col-sm-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis bibendum metus. Praesent vitae euismod tortor. Donec sed pharetra lacus, elementum consectetur sapien. Vivamus sed velit elit. Nam posuere purus elit, eget luctus lorem lacinia id. Aenean est nunc, tempor at magna eu, pretium luctus dui. Aliquam consequat tincidunt tellus, et blandit nisl convallis id. In hac habitasse platea dictumst. Donec varius aliquet nisi ac interdum. Quisque ac dapibus lorem, non elementum metus. Etiam et ligula mauris. Nunc vel tortor mi. Nullam tristique, purus et tincidunt sollicitudin, lectus arcu dignissim diam, gravida molestie est ex at urna.
-
-              Nam bibendum tortor sit amet mauris placerat commodo. Etiam aliquam mi et diam molestie, eu maximus erat convallis. Praesent egestas dignissim commodo. Nulla a accumsan sem. Nunc volutpat sed metus eget suscipit. Nulla laoreet bibendum elit. Pellentesque et eros sem. Praesent pharetra sit amet risus id blandit.
-            </div>
-            <!--======== FIM DESCRIÇÃO========-->
-          </div>  
+            <div id="spoiler" role="aria-hidden" style="display: none">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+              <input type="text" id="edit-name">
+              <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
+            </form>
+          </div>
+          <p></p>
+          <table class="table table-bordered">
+            <tr>
+              <th>Descrição</th>
+              <th></th>
+            </tr>
+              <tbody id="refeicao-list">
+              </tbody>
+          </table>
+          <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
         </div>
+        <!--======== FIM FORMULÁRIO & LISTA DE OPÇÕES ========-->
+
+        <!--======== INÍCIO DESCRIÇÃO========-->
+        <div class="col-sm-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis bibendum metus. Praesent vitae euismod tortor. Donec sed pharetra lacus, elementum consectetur sapien. Vivamus sed velit elit. Nam posuere purus elit, eget luctus lorem lacinia id. Aenean est nunc, tempor at magna eu, pretium luctus dui. Aliquam consequat tincidunt tellus, et blandit nisl convallis id. In hac habitasse platea dictumst. Donec varius aliquet nisi ac interdum. Quisque ac dapibus lorem, non elementum metus. Etiam et ligula mauris. Nunc vel tortor mi. Nullam tristique, purus et tincidunt sollicitudin, lectus arcu dignissim diam, gravida molestie est ex at urna.
+
+          Nam bibendum tortor sit amet mauris placerat commodo. Etiam aliquam mi et diam molestie, eu maximus erat convallis. Praesent egestas dignissim commodo. Nulla a accumsan sem. Nunc volutpat sed metus eget suscipit. Nulla laoreet bibendum elit. Pellentesque et eros sem. Praesent pharetra sit amet risus id blandit.
+        </div>
+        <!--======== FIM DESCRIÇÃO========-->
+      </div>  
+    </div>
   </body>
   <script type="text/javascript" src="js/chart.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
