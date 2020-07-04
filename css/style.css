@@ -20,3 +20,8 @@ text{
 .teste {
   text-align: center;
 }
+
+ .svg-container{
+     /**display: inline-block;
+     margin: 0 auto;**/
+  }
