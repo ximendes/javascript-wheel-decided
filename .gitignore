@@ -1,0 +1,16 @@
+# Log file
+*.log
+*.idea
+*.iml
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# DS_Store
+**/*DS_Store*
+# Log files
+**/*.log
+**/*.log.zip
