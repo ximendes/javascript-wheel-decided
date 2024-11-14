@@ -1,4 +1,19 @@
-OWNERDOMAIN=
+OWNERDOMAIN=roletadadecisao.com.br
+rubiconproject.com,26800,RESELLER,0bfd66d529a55807
+adform.com,2926,RESELLER
+improvedigital.com,2106,RESELLER
+smartadserver.com,4288,RESELLER
+video.unrulymedia.com,533898005,RESELLER
+dauup.com,34141,RESELLER
+richaudience.com,RxVFrJzPTg,RESELLER
+trustedstack.com,TS7LELSN3,DIRECT
+rubiconproject.com,26144,RESELLER,0bfd66d529a55807
+pubmatic.com,164187,RESELLER,5d62403b186f2ace
+amxrtb.com,105199734,RESELLER
+media.net,8CU67TH23,RESELLER
+openx.com,559911747,RESELLER,6a698e2ec38604c6
+yieldmo.com,3377199372461613093,RESELLER
+onetag.com,87f58fe90234d0e,RESELLER
 MANAGERDOMAIN=themoneytizer.com
 themoneytizer.com,94209,DIRECT
 smartadserver.com, 1097, DIRECT, 060d053dcf45cbf3
