@@ -1,11 +1,9 @@
-
-
 (function() {
-  var host = 'www.themoneytizer.com';
+  var host = "www.themoneytizer.com";
   var element = document.createElement('script');
   var firstScript = document.getElementsByTagName('script')[0];
-  var url = 'https://cmp.quantcast.com'
-    .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js');
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js?tag_version=V3');
   var uspTries = 0;
   var uspTriesLimit = 3;
   element.async = true;
@@ -67,7 +65,7 @@
         }
       } else {
         if(args[0] === 'init' && typeof args[3] === 'object') {
-          args[3] = { ...args[3], tag_version: 'V2' };
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
         }
         queue.push(args);
       }
@@ -158,4 +156,3 @@
     var uspInterval = setInterval(checkIfUspIsReady, 6000);
   }
 })();
-
